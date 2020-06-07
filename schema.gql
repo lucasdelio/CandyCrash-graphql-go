@@ -1,0 +1,15 @@
+schema {
+	query: Query
+}
+type Event {
+	id: ID!
+	description: String!
+	location: String!
+	time: String!
+	cost: Float!
+	pictures: [String!]!
+}
+type Query {
+	events: [Event!]!
+	event(id: ID!): Event!
+}
